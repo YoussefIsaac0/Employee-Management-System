@@ -36,3 +36,160 @@
     transform: rotate(360deg);
   }
 }
+
+/*Header*/
+.header{
+  display: flex;
+  justify-content:space-between;;
+  align-items: center;
+  flex-direction: column;
+  height: 40vh;
+  background-color: #008080;
+  position:relative;
+  
+}
+
+nav{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap:30px;
+  color:white;
+  font: weight 500px;
+  font-size: 20px;
+  padding-right:30px;
+  align-self: flex-end;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  /* border: 2px solid red; */
+
+}
+nav a{
+  position: relative;
+  text-decoration: none;
+  color:white
+}
+a::after{
+  content: '';
+    position: absolute;
+    left: 0;
+    width:0%;
+    bottom: -3px; /* Position the line just below the element */
+    height: 2px;
+    background-color: white;
+    transition:ease 0.4s ; /* Smooth transition effect */
+}
+nav a:hover{
+  cursor: pointer;
+  transition:ease 0.4s ; /* Smooth transition effect */
+
+}
+nav a:hover:after{
+  width:100%
+}
+.secondItem{
+  margin-top: -20px;
+  position:absolute;
+  top:50%
+}
+
+/*ViewPage Styling*/
+
+/*Card Styling*/
+
+.CardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px; /* Example max-width for cards */
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  background-color: #008080;
+
+}
+
+.Card:hover{
+  transform: translateY(-5px); /* Move div 5px upwards on hover */
+}
+.Card p{
+  font-weight: bolder;
+  font-size: large;
+  color:whitesmoke
+}
+
+
+/*Form*/
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+input[type="text"], input[type="checkbox"] {
+  margin-left: 5px;
+}
+
+input[type="submit"] {
+  margin-left: 10px;
+}
+
+/*Handle Message like loading and error*/
+.loadingCircle{
+  min-width: 50px;
+  min-height: 50px;
+  border: 3px solid #008080;
+  border-bottom: none;
+  border-right:none;
+  border-radius: 1000px;
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.Message{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #008080;
+  padding:5vh;
+  border-radius: 10px;
+  gap:10px;
+  position: fixed;
+  inset: 0px;
+  width: fit-content;
+  height: fit-content;
+  
+  margin: auto;
+}
